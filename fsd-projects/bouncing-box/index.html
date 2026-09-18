@@ -55,10 +55,8 @@
 
       // Every time the box is clicked, call the handleBoxClick Function (see below)
       box.on("click", handleBoxClick);
-      positionX = 0;
-      points = points + 1;
 
-      speed = 3 * points + 10;
+points = points + 1;
 
 
       // moves the Box to a new position on the screen along the X-Axis
@@ -79,9 +77,9 @@
       var positionX = 0;
       var points = 0;
       points = points + 1;
-      var speed = 10;
-      changeBoxText(points);
 
+      changeBoxText(points);
+      var speed = 10;
 
       /**
        * This Function will be called 20 times/second.
@@ -113,10 +111,12 @@
        */
       function handleBoxClick() {
 
-        var positionX = 0;
-        positionX = positionX + 0;
-        boxtext = 0
+        positionX = 0;
+        positionX = positionX + speed;
+            speed = 3 * points + 10;
+            points = points + 1;
 
+        changeBoxText(points);
 
 
       }
